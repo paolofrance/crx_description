@@ -14,7 +14,7 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-install(DIRECTORY config launch crx20/urdf
+install(DIRECTORY config launch crx20
   DESTINATION share/${PROJECT_NAME}
 )
 ament_package()
