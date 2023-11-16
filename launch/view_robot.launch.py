@@ -38,8 +38,6 @@ from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
-    declared_arguments = []
-    
     description_package = "crx_description"
 
     robot_description_content = Command(
@@ -76,4 +74,4 @@ def generate_launch_description():
         rviz_node,
     ]
 
-    return LaunchDescription(declared_arguments + nodes_to_start)
+    return LaunchDescription(nodes_to_start)
