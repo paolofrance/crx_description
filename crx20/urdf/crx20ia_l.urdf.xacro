@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <xacro:include filename="$(find crx_description)/crx20/urdf/crx20ia_l.ros2_control.xacro"/>  
+  <xacro:crx20_ros2_control name="crx20"/>
+
+
   <xacro:macro name="crx20ia_l">
 
     <material name="FANUC_Black">
