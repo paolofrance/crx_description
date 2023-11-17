@@ -7,8 +7,8 @@
 
       <hardware>
         <plugin>mock_components/GenericSystem</plugin>
-        <!-- <param name="mock_sensor_commands">${mock_sensor_commands}</param> -->
-        <param name="state_following_offset">0.0</param>
+        <param name="position_state_following_offset">0.1</param>
+        <!-- <plugin>fanuc/FanucTopic</plugin> -->
       </hardware>
 
       <joint name="J1">
