@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<robot name="crx25ia_l" xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:include filename="$(find crx_description)/urdf/crx25ia_l/crx25ia_l.urdf.xacro"/>
+  <!-- <xacro:include filename="$(find crx_description)/crx25/urdf/crx25ia_l.ros2_control.xacro"/> -->
+
+  <xacro:crx25ia_l/>
+  <!-- <xacro:crx25_ros2_control name="crx25"/> -->
+
+</robot>

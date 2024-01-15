@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot name="crx5" xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:include filename="$(find crx_description)/urdf/crx5ia/crx5ia.urdf.xacro"/>
+
+  <xacro:crx5/>
+
+</robot>

@@ -38,12 +38,14 @@ from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
+    
+    robot = "crx10ia"
     description_package = "crx_description"
-
+    
     robot_description_content = Command(
         [
             PathJoinSubstitution([FindExecutable(name="xacro")]),
-            " ",PathJoinSubstitution([FindPackageShare(description_package), "crx20/urdf/", "crx20ia_l.xacro"]),
+            " ",PathJoinSubstitution([FindPackageShare(description_package), "urdf/"+robot+"/", robot+".xacro"]),
         ]
     )
 

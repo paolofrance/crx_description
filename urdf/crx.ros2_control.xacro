@@ -1,14 +1,19 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:macro name="crx20_ros2_control" params="name">
+  <xacro:macro name="crx_ros2_control" params="name use_mock_hardware:=false">
 
     <ros2_control name="${name}" type="system">
 
       <hardware>
-        <!-- <plugin>mock_components/GenericSystem</plugin> -->
-        <!-- <param name="position_state_following_offset">0.1</param> -->
-        <plugin>fanuc/FanucTopic</plugin>
+
+        <xacro:if value="${use_mock_hardware}">
+          <plugin>mock_components/GenericSystem</plugin>
+          <!-- <param name="position_state_following_offset">0.1</param> -->
+        </xacro:if>
+        <xacro:unless value="${use_mock_hardware}">
+          <plugin>fanuc/FanucTopic</plugin>
+        </xacro:unless>
       </hardware>
 
       <joint name="J1">
