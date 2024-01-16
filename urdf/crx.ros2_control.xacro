@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:macro name="crx_ros2_control" params="name use_mock_hardware:=false">
+  <xacro:macro name="crx_ros2_control" params="name robot_ip:=10.11.31.111 use_mock_hardware:=false">
 
     <ros2_control name="${name}" type="system">
 
@@ -12,7 +12,8 @@
           <!-- <param name="position_state_following_offset">0.1</param> -->
         </xacro:if>
         <xacro:unless value="${use_mock_hardware}">
-          <plugin>fanuc/FanucTopic</plugin>
+          <plugin>fanuc/FanucHw</plugin>
+          <param name="robot_ip">${robot_ip}</param>
         </xacro:unless>
       </hardware>
 
