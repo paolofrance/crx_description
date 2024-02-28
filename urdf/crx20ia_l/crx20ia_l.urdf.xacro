@@ -3,21 +3,19 @@
 
 
   <xacro:macro name="crx20ia_l" 
-  params="robot_ip:=10.11.31.121 
-  read_only:=false 
-  use_mock_hardware:=false">
-
+               params="robot_ip:=10.11.31.121 
+               read_only:=false 
+               use_mock_hardware:=false">
   
   <xacro:arg name="use_mock_hardware" default="false"/>
   <xacro:arg name="robot_ip" default="10.11.31.111"/>
   <xacro:arg name="read_only" default="false"/>
 
   <xacro:include filename="$(find crx_description)/urdf/crx.ros2_control.xacro"/>  
-  <xacro:crx_ros2_control 
-  name="crx20" 
-  use_mock_hardware="$(arg use_mock_hardware)" 
-  robot_ip="$(arg robot_ip)"
-  read_only="$(arg read_only)"/>
+  <xacro:crx_ros2_control name="crx20" 
+                          use_mock_hardware="$(arg use_mock_hardware)" 
+                          robot_ip="$(arg robot_ip)"
+                          read_only="$(arg read_only)"/>
   
     <material name="FANUC_Black">
       <color rgba="0 0 0 1.0"/>
