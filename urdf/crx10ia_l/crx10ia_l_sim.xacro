@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <robot name="crx10ia_l" xmlns:xacro="http://wiki.ros.org/xacro">
   <xacro:include filename="$(find crx_description)/urdf/crx10ia_l/crx10ia_l.urdf.xacro"/>
-  <xacro:crx10ia_l use_mock_hardware="false"/>
+  <xacro:crx10ia_l use_mock_hardware="true"/>
 </robot>
