@@ -3,7 +3,7 @@
 
 
   <xacro:macro name="crx20ia_l" 
-               params="robot_ip:=10.11.31.121
+               params="robot_ip:=192.168.150.2
                read_only=false 
                use_rmi=false 
                use_mock_hardware=false">
