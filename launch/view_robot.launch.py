@@ -39,7 +39,7 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
     
-    robot = "crx10ia"
+    robot = "crx5ia"
     description_package = "crx_description"
     
     robot_description_content = Command(
